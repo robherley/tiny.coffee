@@ -1,5 +1,5 @@
 {
-  "name": "parrot-live",
+  "name": "tiny-coffee",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -14,9 +14,9 @@
     "nodemon": "1.18.7"
   },
   "author": {
-    "name": "Hugo Muller-Downing",
-    "email": "npmjs@hugo.sx",
-    "url": "hu.md"
+    "name": "Rob Herley",
+    "email": "robherley13@gmail.com",
+    "url": "https://robherley.xyz"
   },
   "license": "MIT"
 }
