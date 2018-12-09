@@ -3,7 +3,7 @@ version: '3'
 services:
   
   coffee:
-      image: "robherley/tiny.coffee:0.1"
+    image: "robherley/tiny-coffee:0.1"
     container_name: "coffee"
     ports:
         - "3000:3000"
