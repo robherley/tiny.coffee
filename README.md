@@ -5,7 +5,7 @@ to allow any computer with `curl` to display an _animated_ cup of coffee.
 
 ## Try it!
 ```bash
-curl tiny.coffee
+curl -L tiny.coffee
 ```
 
 ## Contributors

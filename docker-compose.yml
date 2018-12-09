@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  
+  coffee:
+      image: "robherley/tiny.coffee:0.1"
+    container_name: "coffee"
+    ports:
+        - "3000:3000"
+    networks:
+      - traefik_proxy
+    labels:
+      traefik.enable: "true"
+      traefik.frontend.rule: "Host: tiny.coffee"
+      traefik.backend: "coffee-backend"
+      traefik.port: "3000"
+    restart: always
+
+networks:
+  traefik_proxy:
+    external:
+      name: traefik_proxy
