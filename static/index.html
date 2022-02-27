@@ -2,21 +2,85 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>covfefe</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+    <title>tiny.coffee</title>
     <style>
-      body {
+      * {
+        padding: 0;
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      }
+
+      ::selection {
+        background: #6366f1;
+      }
+
+      body {
         height: 100vh;
+        background: #22272E;
+        color: #ADBAC7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+      }
+
+      code {
+        display: block;
+        padding: 0.35rem 0.55rem;
+        background-color: black;
+        font-family: inherit;
+        white-space: nowrap;
+        border-radius: 0.4rem;
+        font-size: 2rem;
+      }
+
+      code::before {
+        content: '$ ';
+        color: #6366f1;
+      }
+
+      a {
+        background-color: #373e47;
+        padding: 0.35rem 0.55rem;
+        color: inherit;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        border: 1px solid #7a828e;
+        margin-top: 0.75rem;
+      }
+
+      a:hover {
+        filter: brightness(1.25);
+        transition: all 300ms;
+        cursor: pointer;
+      }
+
+      img {
+        position: absolute;
+        height: 25px;
+        width: 35px;
+        animation: vertical 3.5s linear 0s infinite alternate, horizontal 10s linear 0s infinite alternate;
+      }
+
+      @keyframes vertical {
+        from { top: 0; } to { top: calc(100vh - 25px); }
+      }
+
+      @keyframes horizontal {
+        from { left: 0; } to { left: calc(100vw - 35px); }
       }
     </style>
   </head>
-
   <body>
+    <code>curl tiny.coffee</code>
+    <a href="https://github.com/robherley/tiny.coffee" alt="source code">
+      <span role="img" aria-label="link">🔗</span> robherley/tiny.coffee
+    </a>
     <img
       src="data:image/gif;base64,R0lGODlhIwAZAPZKACIYDiIYDyMZECE5CC4kGy8lGy8lHC8kHjgwGzYpITQqITcpKUA3KEA2LUE3
     LUA1L0E3LjlaCEJ7AII4EY0+E4s7GIg8GIo/GI09GIw+GI0/GY4+GY09Go0/G44+G4o+Hoo/H4w9
@@ -135,7 +199,7 @@
     wocdL1KkODHDlD6DtTYxqiEhwwgdRJIU0UHihC1vBoVhXGQwQoUQSW4INdLCpqlOtFQm6rGJRgUK
     QYeeMJqyadWlKGl4yMAj3RAdJqhitJXwENOLNFxOyCCjRAqJRbbiVh1HqZitERsYejghUqxcgnSV
     9OgZ95+9dDhoyW1nqMeoxYYDIl48zFOos4ptRVbHjnI7ao47iR5go7QNHKhHi44XCAA7"
-      alt="covfefe"
+      alt="coffee parrot"
     />
   </body>
 </html>
