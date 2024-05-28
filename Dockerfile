@@ -1,20 +1,16 @@
-FROM golang:1.17 as build
+FROM rust:1.78 as build
 
-WORKDIR /build
+WORKDIR /usr/src/app
 
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
-RUN go mod verify
-
-COPY main.go ./
+COPY Cargo.toml Cargo.toml
+COPY src/ src/
 COPY frames/ ./frames/
 COPY static/ ./static/
 
-RUN go build -a -ldflags='-extldflags=-static' -o 'tiny.coffee'
+RUN cargo install --path .
 
-FROM gcr.io/distroless/base-debian11
+FROM gcr.io/distroless/cc-debian12
 
-COPY --from=build /build/tiny.coffee /
+COPY --from=build /usr/local/cargo/bin/tiny_coffee /tiny_coffee
 
-CMD [ "/tiny.coffee" ]
+CMD [ "/tiny_coffee" ]
