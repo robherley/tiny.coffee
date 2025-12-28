@@ -47,7 +47,7 @@ func init() {
 	}
 }
 
-func Coffee(w http.ResponseWriter, r *http.Request) {
+func Handler(w http.ResponseWriter, r *http.Request) {
 	isCurl := strings.Contains(r.Header.Get("user-agent"), "curl")
 	log.Println("new req | is curl:", isCurl)
 

@@ -22,7 +22,7 @@ func main() {
 
 	server := &http.Server{
 		Addr:    net.JoinHostPort(host, port),
-		Handler: http.HandlerFunc(api.Coffee),
+		Handler: http.HandlerFunc(api.Handler),
 	}
 
 	log.Println("serving coffee on:", server.Addr)
