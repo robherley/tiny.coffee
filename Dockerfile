@@ -1,4 +1,4 @@
-FROM golang:1.17 as build
+FROM golang:1.26 AS build
 
 WORKDIR /build
 
@@ -11,9 +11,9 @@ COPY main.go ./
 COPY frames/ ./frames/
 COPY static/ ./static/
 
-RUN go build -a -ldflags='-extldflags=-static' -o 'tiny.coffee'
+RUN CGO_ENABLED=0 go build -a -ldflags='-extldflags=-static' -o 'tiny.coffee'
 
-FROM gcr.io/distroless/base-debian11
+FROM gcr.io/distroless/static-debian13
 
 COPY --from=build /build/tiny.coffee /
 

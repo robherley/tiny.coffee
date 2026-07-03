@@ -3,8 +3,9 @@
 Fork of [`parrot.live`](https://github.com/hugomd/parrot.live), but with 100% less parrot and 100% more coffee. And now in go!
 
 ## ☕ Try it
+
 ```console
-$ curl tiny.coffee
+$ curl -L tiny.coffee
 ```
 
 ## ⚙️ Run it
