@@ -57,7 +57,7 @@ func main() {
 		if isCurl {
 			idx := 0
 			ticker := time.NewTicker(time.Millisecond * 100)
-			reqCancelCtx, cancel := context.WithTimeout(r.Context(), time.Minute*2)
+			reqCancelCtx, cancel := context.WithTimeout(r.Context(), 45*time.Second)
 			defer cancel()
 
 			for {
